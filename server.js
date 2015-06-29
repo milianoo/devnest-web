@@ -33,7 +33,7 @@ app.post('/registeremail',urlencodedParser, function (req, res) {
    res.end(JSON.stringify(response));
 })
 
-var server = app.listen(app.get('port'), function () {
+var server = app.listen(process.env.PORT || 5000, function () {
 
   var host = server.address().address
   var port = server.address().port
