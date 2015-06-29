@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 var app = express();
 var bodyParser = require('body-parser');
 
@@ -8,29 +9,20 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 app.use(express.static(path.resolve(__dirname, 'client')));
 
-app.get('/home', function (req, res) {
-  var email = req.query.email; 
-  console.log(email);
-   res.sendFile( __dirname + "/client/" + "index.html" );
-})
-
-app.post('/', function (req, res) {
-
-   // Prepare output in JSON format
-   var response = {
-       first_name:req.body.email
-   };
-   console.log(response);
-   res.sendFile( __dirname + "/client/" + "index.html" );
+app.get('/contacts', function (req, res) {
+  console.log("contacts requested.");
+   res.sendFile( __dirname + "/" + "contacts.csv" );
 })
 
 app.post('/registeremail',urlencodedParser, function (req, res) {
 
-   var response = {
-       email:req.body.email
-   };
-   console.log(response);
-   res.end(JSON.stringify(response));
+   var email = req.body.email;
+   
+   fs.appendFile('contacts.csv', email + '\n', function (err) {
+		if (err) return console.log(err);
+	});
+   
+   res.sendFile( __dirname + "/client/" + "index.html" );
 })
 
 var server = app.listen(process.env.PORT || 5000, function () {
