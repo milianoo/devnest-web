@@ -17,8 +17,9 @@ app.get('/contacts', function (req, res) {
 app.post('/registeremail',urlencodedParser, function (req, res) {
 
    var email = req.body.email;
+   var name = req.body.name;
    
-   fs.appendFile('contacts.csv', email + '\n', function (err) {
+   fs.appendFile('contacts.csv', name + '<'+email + '>,\n', function (err) {
 		if (err) return console.log(err);
 	});
    
