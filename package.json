@@ -1,0 +1,23 @@
+{
+  "name": "devnest.io-web",
+  "version": "0.1.4",
+  "description": "Devnest webpage alpha",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "express": "^5.0.0-alpha.1",
+    "path": "^0.11.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milianoo/devnest.io-web"
+  },
+  "keywords": [
+    "devnest",
+    "docker",
+    "express"
+  ]
+}
