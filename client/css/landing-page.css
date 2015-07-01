@@ -35,7 +35,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url('http://wallpoper.com/images/00/39/40/54/blueprints-textures_00394054.jpg') no-repeat center center;
+    background: url('../img/bg.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -58,7 +58,7 @@ h6 {
 }
 
 form{
-  
+  height: 300px;
 }
 
 form div{

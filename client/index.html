@@ -52,7 +52,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#services">Meetup</a>
+                        <a id="services">Meetup</a>
                     </li>
                     <li>
                         <a id="contact">Contact</a>
@@ -83,19 +83,19 @@
                                   <option value="sofware architect">Software Architect</option>
                                   <option value="sofware developer" selected>Software Developer</option>
                                   <option value="quality engineer">Quality Engineer</option>
+                                  <option value="devops engineer">DevOps Engineer</option>
                                   <option value="manager">Manager</option>
                                   <option value="IT">IT Engineer</option>
                                   <option value="other">Other</option>
                                 </select>
                             </div>
                             <div class="col-sm-12"><input type="submit" value="Submit"></div>
+                            <div class="col-sm-12"></div>
+                            <div class="col-sm-12">
+                                <img src="img/Nintex_Labs2.png" alt="">
+                            </div>
+                        </div>
                         </form>
-                         <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/dev_nest" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
     <!-- Page Content -->
 
 	<a  name="services"></a>
-    <div class="content-section-a">
+    <div class="content-section-a" id="div_services">
 
         <div class="container">
             <div class="row">
@@ -146,10 +146,10 @@
                         <br>KL Sentral, Kuala Lumpur, Malaysia
                             <br>
                         <br>Agenda:
-                        <br>6:30 - Doors opens & Networking starts 
-                        <br>7:30 - Presentation - What is DevOps? by Tze Chin Tang
-                        <br>8.:00 : Introduction to Docker + demo by Mohammad Arab
-                        <br>9:15 - Venue closes
+                        <br>18:30 - Doors opens & Networking starts 
+                        <br>19:30 - 'What is DevOps?' by Tze Chin Tang
+                        <br>20:00 - 'Introduction to Docker' by Mohammad Arab
+                        <br>21:15 - Venue closes
                     </p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
@@ -186,7 +186,7 @@
     <!-- /.content-section-a -->
 
 	<a  name="contact"></a>
-    <div class="banner" id="contactus">
+    <div class="banner" id="contact_div">
 
         <div class="container">
 
@@ -198,6 +198,8 @@
                     <ul class="list-inline banner-social-buttons">
                         <li>
                             <a href="https://twitter.com/dev_nest" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            <a href="https://www.facebook.com/groups/docker.kl/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            <a href="mailto:amir@devnest.io" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name"> Send Email</span></a>
                         </li>
                     </ul>
                 </div>
@@ -224,7 +226,7 @@
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#services">Services</a>
+                            <a href="#services">Meetup</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
@@ -246,7 +248,13 @@
     <script>
         $("#contact").click(function() {
             $('html, body').animate({
-                scrollTop: $("#contactus").offset().top
+                scrollTop: $("#contact_div").offset().top
+            }, 1000);
+        });
+        
+        $("#services").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#div_services").offset().top
             }, 1000);
         });
     </script>
