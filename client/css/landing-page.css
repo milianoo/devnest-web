@@ -58,25 +58,30 @@ h6 {
 }
 
 form{
-  padding-left: 70px;
+  
 }
 
-#formelements{
-    display: inline;
+form div{
+    margin: 10px;
 }
 
 form input[type=submit] {
+    /*
   background: url(http://buckets.io/images/arrow-right.svg) no-repeat center;
   background-size: 30%;
   border: none;
   color: transparent;
+  */
+  color: darkslateblue;
+  width: 300px;
+  padding: 10px;
 }
 
 .email {
   letter-spacing: .03em;
   padding: 10px;
   margin:auto;
-  width: 40%;
+  width: 300px;
   font-size: 19px;
   font-size: 1.1875rem;
   line-height: 24px;
@@ -136,7 +141,7 @@ form input[type=submit] {
 
 .section-heading-spacer {
     float: left;
-    width: 200px;
+    width: 100%;
     border-top: 3px solid #e7e7e7;
 }
 
