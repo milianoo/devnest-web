@@ -9,10 +9,12 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 app.use(express.static(path.resolve(__dirname, 'client')));
 
+/*
 app.get('/contacts', function (req, res) {
   console.log("contacts requested.");
    res.sendFile( __dirname + "/" + "contacts.csv" );
 })
+*/
 
 app.post('/registeremail',urlencodedParser, function (req, res) {
 
