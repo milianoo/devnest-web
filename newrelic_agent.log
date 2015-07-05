@@ -1,0 +1,6 @@
+{"v":0,"level":30,"name":"newrelic","hostname":"miladrk-devnest-web-1635509","pid":18561,"time":"2015-07-01T04:33:35.318Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"miladrk-devnest-web-1635509","pid":18561,"time":"2015-07-01T04:33:37.174Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/1031298/applications/9189806","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"miladrk-devnest-web-1635509","pid":18561,"time":"2015-07-01T04:33:37.175Z","msg":"Connected to collector-173.newrelic.com:443 with agent run ID 39469926382088921.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"miladrk-devnest-web-1635509","pid":19299,"time":"2015-07-01T04:35:23.546Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"miladrk-devnest-web-1635509","pid":19299,"time":"2015-07-01T04:35:25.232Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/1031298/applications/9189806","component":"new_relic_response"}
+{"v":0,"level":30,"name":"newrelic","hostname":"miladrk-devnest-web-1635509","pid":19299,"time":"2015-07-01T04:35:25.233Z","msg":"Connected to collector-173.newrelic.com:443 with agent run ID 39469926382092569.","component":"collector_api"}
