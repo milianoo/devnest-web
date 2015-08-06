@@ -6,15 +6,16 @@
         path = require('path'),
         app = express();
         
+        // set to load html (can not render html without ejs)
         app.engine('html', require('ejs').renderFile);
         app.set('view engine', 'html');
         
+        // set public folder and view folder
         app.use(express.static(path.join(__dirname, 'public')));
         app.set('views', __dirname + '/views');
         
         // Create application/x-www-form-urlencoded parser
         app.use(bodyParser.urlencoded({ extended: true }));
-        
         
         // serve index and view partials
         app.get('/', routes.index);
@@ -23,6 +24,7 @@
         // redirect all others to the index (HTML5 history)
         app.get('*', routes.index);
         
+        // start server
         var server = app.listen(process.env.PORT || 5000, function () {
             var port = server.address().port;
             console.log("devnest app started at port %s", port);

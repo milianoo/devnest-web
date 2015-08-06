@@ -1,5 +1,4 @@
-<div class="container">
-        <!-- Page Heading -->
+<div class="container" ng-controller="MeetupCtrl">
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Our Meetups
@@ -7,43 +6,30 @@
                 </h1>
             </div>
         </div>
-        <!-- /.row -->
         
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="img/comingsoon.jpg" alt="" width="700" height="350" style="border: 3px dashed black">
-                </a>
+        <div ng-repeat="meetup in meetups">
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="{{meetup.meetup}}">
+                        <img class="img-responsive meetup-cover" src="{{meetup.image}}" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5">
+                    <a href="{{meetup.meetup}}"><img src="img/icons/meetup.png" width="128"></a>
+                    <h3 style="margin-top:0px;">{{meetup.title}}</h3>
+                    <h4>{{meetup.date}}</h4>
+                    <p>{{meetup.description}}
+                    <br>
+                    Speakers:<br>
+                    <div ng-repeat="speaker in meetup.speakers">
+                        <strong>{{speaker.name}}</strong>
+                        <br>{{speaker.title}}
+                        <br>
+                    </div>
+                    </p>
+                </div>
             </div>
-            <div class="col-md-5">
-                <h3 style="margin-top:0px;">Next Docker KL</h3>
-                <h4>Coming Soon in August</h4>
-                
-            </div>
+            <hr>
         </div>
-
-        <hr>
-        <!-- Project One -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="img/meetup-cover.jpg" alt="" width="700" height="350" >
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3 style="margin-top:0px;">Docker Intorduction + DevOps</h3>
-                <h4>1st July 2015</h4>
-                <p>First Docker event in town, Introduction to Docker and how we can use a revolutionized software development and deployment by one of the best engineers in this field.
-                <br>
-                Speakers:<br>
-                <strong>Tang Tze Chin (Tze)</strong><br>
-                Delivery Manager at Nintex & DevOps Malaysia committee member<br>
-                <Strong>Mohamad Arab</Strong><br>
-                Cloud Engineer at Nintex & Docker KL committee member
-                </p>
-                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
+        
+</div>

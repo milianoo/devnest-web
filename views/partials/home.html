@@ -1,148 +1,38 @@
-<!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>DevOps + Docker meetup.</h1>
-                        <h3>Great and successful meetup in Kuala Lumpur.</h3>
-                       <div class="col-sm-12">
-                           <img src="img/meetup-cover.jpg" alt="" style="border: 10px solid white;">
-                       </div>
-                       <!--
-                        <form action="/registeremail" method="post">
-                            <div class="col-sm-12"><input class="button email" type="text" name="name" placeholder="please enter your name here" id="name"></div>
-                            <div class="col-sm-12"><input class="button email" type="email" name="email" placeholder="please enter your email address" id="email"></div>
-                            <div class="col-sm-12">
-                                <select class="button email" name="position">
-                                  <option value="sofware architect">Software Architect</option>
-                                  <option value="sofware developer" selected>Software Developer</option>
-                                  <option value="quality engineer">Quality Engineer</option>
-                                  <option value="devops engineer">DevOps Engineer</option>
-                                  <option value="manager">Manager</option>
-                                  <option value="IT">IT Engineer</option>
-                                  <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-12"><input type="submit" value="Submit"></div>
-                            <div class="col-sm-12"></div>
-                            <div class="col-sm-12">
-                                <img src="img/Nintex_Labs2.png" alt="">
-                            </div> -->
-                        </div>
-                        </form>
-                    </div>
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message" ng-controller="MeetupCtrl">
+                    <h1>Next Meetup</h1>
+                    <h3>{{meetups[0].title}}</h3>
+                    <h3>{{meetups[0].date}} - {{meetups[0].host}}</h3>
+                   <img src="{{meetups[0].image}}" alt="" style="width: 100%">
                 </div>
             </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-
-    <!-- Page Content -->
-
-	<a  name="services" id="div_services"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Docker Kuala Lumpur</h2>
-                    <hr class="section-heading-spacer">
-                    <p class="lead">We are docker KL, User group of docker. Our goal is to share knowledge about docker powers and how it can save our time and sanity in age of cloud. we will have meetups time to time, discussion and workshops.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-circle" src="img/docker.jpg" alt="" width="300" height="300">
-                </div>
+            <div class="col-lg-12">
+                
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-a -->
+    <!-- /.container -->
+</div>
+<!-- /.intro-header -->
 
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Hello Docker</h2>
-                    <hr class="section-heading-spacer">
-                    <p class="lead">
-                            Date & Time : 1/7/15 - Wednesday (6:30 PM till 8:30)
-                            <br>
-                        <br>Venue : Nintex Software Malaysia
-                        <br>KL Sentral, Kuala Lumpur, Malaysia
-                            <br>
-                        <br>Agenda:
-                        <br>18:30 - Doors opens & Networking starts 
-                        <br>19:30 - 'What is DevOps?' by Tze Chin Tang
-                        <br>20:00 - 'Introduction to Docker' by Mohammad Arab
-                        <br>21:15 - Venue closes
-                    </p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-circle" src="img/meetup.jpg" alt="" width="400" height="400">
-                </div>
+<div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-6">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Docker Kuala Lumpur</h2>
+                <hr class="section-heading-spacer">
+                <p class="lead">We are docker KL, User group of docker. Our goal is to share knowledge about docker powers and how it can save our time and sanity in age of cloud. we will have meetups time to time, discussion and workshops.</p>
             </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Sharing by Developers</h2>
-                    <hr class="section-heading-spacer">
-                    <p class="lead">Our goal is to seed and grow technical communities. Connecting node together and cherish talented and fresh minded developers.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-circle" src="img/aim.jpg" alt="" width="300" height="300">
-                </div>
+            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                <img class="img-circle" src="img/docker.jpg" alt="" width="300" height="300">
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-a -->
+    <!-- /.container -->
+</div>
 
-	<a  name="contact"></a>
-    <div class="banner" id="contact_div">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to us</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/dev_nest" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            <a href="https://www.facebook.com/groups/docker.kl/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                            <a href="mailto:amir@devnest.io" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name"> Send Email</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.banner -->
+	
