@@ -63,6 +63,18 @@ h6 {
     font-size: 5em;
 }
 
+.intro-image{
+    width: 100%;
+}
+
+.intro-image-pattern{
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIW2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEqRgDDwAAAABJRU5ErkJggg==) repeat;
+    width: 100%;
+    min-height: 100%;
+    position:absolute;
+	opacity: 0.7;
+}
+
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
