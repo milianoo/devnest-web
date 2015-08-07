@@ -10,7 +10,7 @@ angular.module('devnestApp.controllers', []).
   controller('MeetupCtrl', function ($scope) {
     $scope.meetups = [{title:'Scaling Microservices + Optimizing with Ansible',
                        date: '26th August 2015',
-                       location: '',
+                       location: 'Exact Asia Development Centre, Suite 8-01, Level 8, GTower, 199, Jalan Tun Razak, Kuala Lumpur, Malaysia',
                        host: 'Exact ADC',
                        image: 'img/meetupcovers/meetup2.jpg',
                        meetup: 'http://www.meetup.com/Docker-Kuala-Lumpur/events/224400906/',

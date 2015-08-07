@@ -46,8 +46,8 @@ h6 {
 .intro-header {
     text-align: center;
     color: #f8f8f8;
-    background: url('../img/bg.jpg') no-repeat center center;
     background-size: cover;
+    min-height: 900px;
 }
 
 .intro-message {
