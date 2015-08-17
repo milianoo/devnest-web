@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('devnestApp',['devnestApp.controllers','ngRoute']).
+angular.module('devnestApp',['devnestApp.controllers','ngRoute','ngAnimate']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
@@ -9,8 +9,8 @@ angular.module('devnestApp',['devnestApp.controllers','ngRoute']).
       when('/home', {
         templateUrl: 'partials/home'
       }).
-      when('/meetup', {
-        templateUrl: 'partials/meetup'
+      when('/meetups', {
+        templateUrl: 'partials/meetups'
       }).
       when('/people', {
         templateUrl: 'partials/people'
@@ -18,5 +18,8 @@ angular.module('devnestApp',['devnestApp.controllers','ngRoute']).
       otherwise({
         templateUrl: 'partials/error'
       });
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
   }]);

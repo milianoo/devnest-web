@@ -2,10 +2,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Our Meetups
-                    <small>single meetup</small>
+                    <small>List of meetups organized and performed by Devnest</small>
                 </h1>
             </div>
         </div>
+        
         <div ng-repeat="meetup in meetups">
             <div class="row">
                 <div class="col-md-7">
@@ -14,7 +15,7 @@
                     </a>
                 </div>
                 <div class="col-md-5">
-                    <a href="{{meetup.meetup}}"><img src="img/icons/meetup.png" width="128"></a>
+                    <a href="{{meetup.meetup}}"><img src="/img/icons/meetup.png" width="128"></a>
                     <h3 style="margin-top:0px;">{{meetup.title}}</h3>
                     <h4>{{meetup.date}}</h4>
                     <p>{{meetup.description}}

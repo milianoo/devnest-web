@@ -1,19 +1,9 @@
-'use strict';
-
-/* Controllers */
-
-angular.module('devnestApp.controllers', []).
-  controller('IndexCtrl', function ($scope) {
-    // write Ctrl here
-
-  }).
-  controller('MeetupCtrl', function ($scope,$routeParams) {
-    console.log($routeParams);
-    $scope.meetups = [{title:'Scaling Microservices + Optimizing with Ansible',
+var meetupList = {
+    "meetups" : [{title:'Scaling Microservices + Optimizing with Ansible',
                        date: '26th August 2015',
                        location: 'Exact Asia Development Centre, Suite 8-01, Level 8, GTower, 199, Jalan Tun Razak, Kuala Lumpur, Malaysia',
                        host: 'Exact ADC',
-                       image: '/img/meetupcovers/meetup2.jpg',
+                       image: 'img/meetupcovers/meetup2.jpg',
                        meetup: 'http://www.meetup.com/Docker-Kuala-Lumpur/events/224400906/',
                        eventbribe: 'https://www.eventbrite.com/e/docker-kl-scaling-microservices-optimizing-with-ansible-tickets-18022856850',
                        facebook: 'https://www.facebook.com/groups/docker.kl/',
@@ -27,7 +17,7 @@ angular.module('devnestApp.controllers', []).
                        date: '1st July 2015',
                        location: '',
                        host: 'Nintex Malaysia',
-                       image: '/img/meetupcovers/meetup1.jpg',
+                       image: 'img/meetupcovers/meetup1.jpg',
                        meetup: 'http://www.meetup.com/Docker-Kuala-Lumpur/events/222837437/',
                        eventbribe: 'http://www.eventbrite.com/e/hello-docker-tickets-17477010208',
                        facebook: 'https://www.facebook.com/groups/docker.kl/',
@@ -36,14 +26,14 @@ angular.module('devnestApp.controllers', []).
                                    ,{name: 'Manuel Riel', 
                                    title: 'DevOps and Python developer'}
                                  ],
-                       description: 'about docker and how we it revolutionized software development and deployment by one of the best engineers in field. '}];
+                       description: 'about docker and how we it revolutionized software development and deployment by one of the best engineers in field. '}]
+};
 
-  }).
-  controller('PeopleCtrl', function ($scope) {
-    $scope.people = [{name: 'Amireza Fatemi',
+var peopleList = {
+    "people" : [{name: 'Amireza Fatemi',
                       title: 'Software Developer',
                       role: 'Co-Founder',
-                      image: '/img/people/amir.jpg',
+                      image: 'img/people/amir.jpg',
                       linkedin: 'https://my.linkedin.com/pub/amireza-fatemi/26/574/bb4',
                       facebook: 'https://www.facebook.com/arfo90',
                       twitter: '',
@@ -53,7 +43,7 @@ angular.module('devnestApp.controllers', []).
                       ,{name: 'Milad Rezazadeh',
                       title: 'Software Developer',
                       role: 'Co-Founder',
-                      image: '/img/people/milad.jpg',
+                      image: 'img/people/milad.jpg',
                       linkedin: 'https://www.linkedin.com/in/miladrk',
                       facebook: 'https://www.facebook.com/milianoo',
                       twitter: '',
@@ -63,12 +53,23 @@ angular.module('devnestApp.controllers', []).
                       ,{name: 'Mohammad Arab',
                       title: 'Cloud Engineer at Nintex',
                       role: 'Speaker & Advisor',
-                      image: '/img/people/mohamad.jpg',
+                      image: 'img/people/mohamad.jpg',
                       linkedin: 'https://my.linkedin.com/in/boynux',
                       facebook: 'https://www.facebook.com/boynux',
                       twitter: '',
                       github: 'https://github.com/boynux',
                       email: 'boynux@gmail.com',
-                      about: 'He is from Mechanical Engineering background and has been in IT field for more than 10 years working with various technologies. He’s passionate about cloud technologies and dust computing. He is Automation enthusiast and lean practitioner.'}];
+                      about: 'He is from Mechanical Engineering background and has been in IT field for more than 10 years working with various technologies. He’s passionate about cloud technologies and dust computing. He is Automation enthusiast and lean practitioner.'}]
+};
 
-  });
+exports.meetups = function (req,res) {
+    var meetups = [];
+    meetupList.meetups.forEach(function(meetup, i){
+        meetups.push({
+            id: i,
+            title: meetup.title,
+            date: meetup.date,
+            
+        }) 
+    });
+}

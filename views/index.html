@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <!-- facebook sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:url"content="http://www.devnest.io" />
     <meta property="og:title" content="DEVNEST : Sharing by developers" />
@@ -16,24 +18,31 @@
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
     
+    <!-- google verification -->
+    <meta name="google-site-verification" content="KTJ_Ibm6DdxWUqNrxPP-GiM4PuQ8dEXv94hQUMZbOoc" />
     
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img//favicon.ico" type="image/x-icon">
     
-    <title>devnest.io</title>
+    <title>DEVNEST : Sharing by developers</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="/css/landing-page.css" rel="stylesheet">
+    <link href="/css/animation.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- my scripts -->
+    <script src="js/scripts.js"></script>
 
 </head>
 
-<body ng-app="devnestApp">
-
+<body ng-app="devnestApp" class="ng-scope">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
@@ -45,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="http://www.devnest.io"><img src="img/logo_t.png"></a>
+                <a href="http://www.devnest.io"><img src="/img/logo_t.png"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -54,7 +63,7 @@
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/meetup">Meetups</a>
+                        <a href="/meetups">Meetups</a>
                     </li>
                     <li>
                         <a href="/people">People</a>
@@ -66,8 +75,8 @@
         <!-- /.container -->
     </nav>
 
-    <div id="maincontent">
-        <div ng-view ></div>
+    <div class="view-animate-container maincontent">
+        <div ng-view class="view-animate"></div>
     </div>
     
 
@@ -86,7 +95,7 @@
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="/meetup">Meetup</a>
+                            <a href="/meetups">Meetup</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
@@ -100,16 +109,18 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
 
     <!-- angularjs -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
-    <script src="js/devnest.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"></script>
+    
+    <script src="/js/devnest.js"></script>
+    <script src="/js/controllers.js"></script>
     
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
 </body>
 
