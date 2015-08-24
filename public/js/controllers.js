@@ -13,9 +13,9 @@ angular.module('devnestApp.controllers', []).
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
       }).
       success(function(data) {
-          $scope.form.status = true;
+          $window.location.href = "/thankyou";
         }).error(function(data) {
-          $scope.form.status = false;
+          $scope.form.status = data;
         });
     };
     $scope.list = function () {
