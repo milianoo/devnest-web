@@ -1,0 +1,39 @@
+<style type="text/css">
+    .biggerFont { font-size: 2rem; height: 50px; width:100%;}
+</style>
+<div style="background: url(http://www.pulsarwallpapers.com/data/media/3/Alien%20Ink%202560X1600%20Abstract%20Background.jpg) no-repeat;background-size: cover;min-height: 100%;padding-top: 10px">
+    <div class="container" style="text-align:center">
+        <img src="/img/exact-logo2.png" >
+        <h3><img class="img-circle" src="/img/docker.jpg" width="90" height"90"> Meetup hosted by Exact Business Software</h3>
+        <div class="row" style="padding: 30px 0px;">
+            <h1>Please register here</h1>
+            <form role="form" data-toggle="validator" ng-submit="register();">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="form-group">
+                            <input class="form-control biggerFont" placeholder="please enter your name here" ng-model='form.name'>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control biggerFont" placeholder="please enter your email address" ng-model='form.email' data-error="Bruh, that email address is invalid" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="button email biggerFont control" name="position" ng-model='form.position'>
+                              <option value="sofware architect">Software Architect</option>
+                              <option value="sofware developer" selected>Software Developer</option>
+                              <option value="quality engineer">Quality Engineer</option>
+                              <option value="devops engineer">DevOps Engineer</option>
+                              <option value="manager">Manager</option>
+                              <option value="IT">IT Engineer</option>
+                              <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary control biggerFont">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+                <h4>Organized by <img src="/img/logo_t.png" width="250"></h4>
+        </div>
+    </div>
+</div>

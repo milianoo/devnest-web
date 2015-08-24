@@ -3,6 +3,7 @@
     var bodyParser = require('body-parser'),
         express = require('express'),
         routes = require('./routes'),
+        api = require('./routes/api'),
         path = require('path'),
         app = express();
         
@@ -20,6 +21,13 @@
         // serve index and view partials
         app.get('/', routes.index);
         app.get('/partials/:name', routes.partials);
+        app.get('/company/:name', routes.company);
+        app.get('/meetup/:name', routes.meetup);
+        
+        app.post('/api/sendmail', api.sendmail);
+        app.post('/api/register', api.register);
+        
+        app.get('/api/list', api.listContacts);
 
         // redirect all others to the index (HTML5 history)
         app.get('*', routes.index);

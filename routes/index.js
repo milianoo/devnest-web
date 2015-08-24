@@ -12,3 +12,14 @@ exports.partials = function (req, res) {
  var name = req.params.name;
  res.render('partials/' + name);
 };
+
+ // render index page
+exports.company = function (req, res){
+    var name = req.params.name;
+ res.render('company/' + name);
+}
+
+exports.meetup = function (req, res){
+    var name = req.params.name;
+ res.render('meetup/' + name);
+}

@@ -22,12 +22,16 @@
     <meta name="google-site-verification" content="KTJ_Ibm6DdxWUqNrxPP-GiM4PuQ8dEXv94hQUMZbOoc" />
     
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/img//favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     
     <title>DEVNEST : Sharing by developers</title>
 
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+    
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/validator.js"></script>
 
     <!-- Custom CSS -->
     <link href="/css/landing-page.css" rel="stylesheet">
@@ -38,7 +42,8 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- my scripts -->
-    <script src="js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
+    
 
 </head>
 
@@ -68,6 +73,9 @@
                     <li>
                         <a href="/people">People</a>
                     </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,8 +83,8 @@
         <!-- /.container -->
     </nav>
 
-    <div class="view-animate-container maincontent">
-        <div ng-view class="view-animate"></div>
+    <div class="maincontent">
+        <div ng-view ></div>
     </div>
     
 
@@ -84,7 +92,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <ul class="list-inline">
                         <li>
                             <a href="/">Home</a>
@@ -99,17 +107,18 @@
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="contact">Contact</a>
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
+                </div>
+                <div class="col-lg-6">
                     <p class="copyright text-muted small">Copyright &copy; Devnest 2015. All Rights Reserved</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="/js/jquery.js"></script>
+    
 
     <!-- angularjs -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>

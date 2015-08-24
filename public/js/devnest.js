@@ -9,11 +9,36 @@ angular.module('devnestApp',['devnestApp.controllers','ngRoute','ngAnimate']).
       when('/home', {
         templateUrl: 'partials/home'
       }).
-      when('/meetups', {
-        templateUrl: 'partials/meetups'
+      when('/contact', {
+        templateUrl: '/partials/contact',
+        controller: 'ContactCtrl'
       }).
       when('/people', {
         templateUrl: 'partials/people'
+      }).
+      when('/meetups', {
+        templateUrl: 'meetup/meetups'
+      }).
+      when('/register', {
+        templateUrl: 'meetup/register',
+        controller: 'RegisterCtrl'
+      }).
+      when('/list', {
+        templateUrl: 'meetup/attendees',
+        controller: 'RegisterCtrl'
+      }).
+      when('/contacts', {
+        templateUrl: 'meetup/attendees',
+        controller: 'RegisterCtrl'
+      }).
+      when('/thankyou', {
+        templateUrl: 'meetup/thankyou'
+      }).
+      when('/nintex', {
+        templateUrl: '/company/nintex',
+      }).
+      when('/exact', {
+        templateUrl: '/company/exact',
       }).
       otherwise({
         templateUrl: 'partials/error'

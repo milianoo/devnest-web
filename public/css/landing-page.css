@@ -22,6 +22,11 @@ h6 {
     font-weight: 700;
 }
 
+p {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
 .topnav {
     
     font-size: 14px; 
@@ -35,6 +40,17 @@ h6 {
 .maincontent{
     height: 80%;
     margin-top:50px;
+}
+
+#bg_pattern{
+    background-image: url(/img/bg_pattern.png);
+    position: fixed;
+    opacity: 0.8;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .meetup-cover{
@@ -220,7 +236,7 @@ form input[type=submit] {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #f8f8f8;
     bottom: 0px;
     position: fixed;
@@ -228,5 +244,5 @@ footer {
 }
 
 p.copyright {
-    margin: 15px 0 0;
+    text-align: right;
 }
