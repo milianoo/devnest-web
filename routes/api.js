@@ -39,8 +39,6 @@ exports.register = function (req,res) {
       console.log('new contact added. [' + contact + ']');
     });
 
-    res.end();
-    
     init(function(db){
         insert(db,[{name: _name, email: _from, position: _position}], 'Attendees', function(result) {
           console.log("inserted.");
