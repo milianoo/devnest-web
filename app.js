@@ -1,4 +1,6 @@
 /* jshint -W079 */
+// this is to prevent creating global variable 
+// it is called Immediatly Invoked Function Experssion IIFE
 (function() {
     var bodyParser = require('body-parser'),
         express = require('express'),

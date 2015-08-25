@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row" style="padding: 30px 0px;">
         <form ng-submit="list();">
-            <button type="submit" class="btn btn-primary control">Load</button>
+            <button type="submit" class="btn btn-primary control">Show attendance</button>
             <h3 ng-show="contacts.length > 0">Total attendees : {{contacts.length}}</h3>
-            <table class="table">
+            <table class="table table-striped">
                 <tr ng-repeat="contact in contacts">
                     <td>{{contact.name}}</td>
                     <td>{{contact.email}}</td>

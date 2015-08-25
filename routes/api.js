@@ -30,7 +30,6 @@ exports.register = function (req,res) {
     var _from = req.body.email;
     var _position = req.body.position;
     
-    
     var contact = _name + "," + _from + "," + _position;
     
     var fs = require('fs');
@@ -38,11 +37,25 @@ exports.register = function (req,res) {
       if (err) return console.log(err);
       console.log('new contact added. [' + contact + ']');
     });
-
+    
     init(function(db){
         insert(db,[{name: _name, email: _from, position: _position}], 'Attendees', function(result) {
-          console.log("inserted.");
+            
+            var sendgrid = require("sendgrid")(process.env.SENDGRID_API_KEY);
+            var email = new sendgrid.Email();
+            
+            email.setTos([_from]);
+            email.setFrom('amir@devnest.io');
+            email.setSubject("Thank you " + _name);
+            email.setHtml(_name);
+            
+            // add filter settings one at a time
+            email.addFilter('templates', 'enable', 1);
+            email.addFilter('templates', 'template_id', 'bd8ef75c-29fe-421c-b0bb-d2a16144b6f5');
+            
+            sendgrid.send(email);
           res.send(result);
+          
         });
     });
 }
