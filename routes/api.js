@@ -25,13 +25,18 @@ exports.sendmail = function (req,res) {
     });
 }
 
+exports.getcontacts = function (req,res) {
+    res.send('./contacts.txt')
+}
+
+
 exports.register = function (req,res) {
     var _name = req.body.name;
     var _from = req.body.email;
     var _position = req.body.position;
     var _company = req.body.company;
     
-    var contact = _name + "," + _from + "," + _position;
+    var contact = _name + "," + _from + "," + _position + "," + _company;
     
     var fs = require('fs');
     fs.appendFile('contacts.txt', contact +'\n' , function (err) {
