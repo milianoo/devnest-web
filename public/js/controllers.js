@@ -5,7 +5,7 @@
 angular.module('devnestApp.controllers', []).
   controller('RegisterCtrl', function ($scope,$window,$http,$httpParamSerializer) {
     $scope.contacts ={};
-    $scope.form.position = "sofware developer";
+    //$scope.form.position = "sofware developer";
     $scope.register = function () {
       $http({
         method: 'POST',
