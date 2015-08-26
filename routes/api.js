@@ -29,6 +29,7 @@ exports.register = function (req,res) {
     var _name = req.body.name;
     var _from = req.body.email;
     var _position = req.body.position;
+    var _company = req.body.company;
     
     var contact = _name + "," + _from + "," + _position;
     
@@ -39,7 +40,7 @@ exports.register = function (req,res) {
     });
     
     init(function(db){
-        insert(db,[{name: _name, email: _from, position: _position}], 'Attendees', function(result) {
+        insert(db,[{name: _name, email: _from, position: _position, company : _company}], 'Attendees', function(result) {
             
             var sendgrid = require("sendgrid")(process.env.SENDGRID_API_KEY);
             var email = new sendgrid.Email();
