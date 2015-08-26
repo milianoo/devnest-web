@@ -1,8 +1,12 @@
 <div class="intro-header" ng-controller="MeetupCtrl">
-    <div style="background: url(/img/ship_cargo.jpg) no-repeat;background-size: cover;min-height: 100%;padding-top: 10px">
+    <div style="background: url(http://crosbymichael.com/static/images/docker-1920-1080.png) no-repeat;background-size: cover;min-height: 100%;padding-top: 10px">
         <h1 style="color:#2E2E2E;">Next Meetup</h1>
-        <h3 style="color:#2E2E2E;"><a href="{{meetups[0].host.url}}">{{meetups[0].date}} - {{meetups[0].host.name}}</a></h3>
+        <h3 style="color:#2E2E2E;">{{meetups[0].date}} - {{meetups[0].host.name}}</a></h3>
         <a href="{{meetups[0].meetup}}"><img src="img/icons/meetup.png" height="70"></a>
+        <h3 style="color:#2E2E2E;">{{meetups[0].title}}</a></h3>
+        <h5 style="color:#2E2E2E;">
+            
+        </h5>
     </div>
 </div>
 <!-- /.intro-header -->
@@ -34,8 +38,8 @@
                     <p class="lead">
                             Date & Time : {{meetups[0].date}} (6:30 PM till 8:30)
                             <br>
-                        <br>Venue : {{meetups[0].host}}
-                        <br>{{meetups[0].location}}
+                        <br>Venue : {{meetups[0].host.name}}
+                        <br>{{meetups[0].host.location}}
                             <br>
                         <br>Agenda:
                         <br>18:30 - Doors opens & Networking starts 
