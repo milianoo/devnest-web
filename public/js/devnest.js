@@ -23,6 +23,9 @@ angular.module('devnestApp',['devnestApp.controllers','ngRoute','ngAnimate']).
         templateUrl: 'meetup/register',
         controller: 'RegisterCtrl'
       }).
+      when('/materials', {
+        templateUrl: 'meetup/materials'
+      }).
       when('/list', {
         templateUrl: 'meetup/attendees',
         controller: 'RegisterCtrl'
