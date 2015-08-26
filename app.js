@@ -27,7 +27,6 @@
         app.get('/meetup/:name', routes.meetup);
         
         app.post('/api/sendmail', api.sendmail);
-        app.get('api/getcontacts',api.getcontacts);
         app.post('/api/register', api.register);
         
         app.get('/api/list', api.listContacts);

@@ -25,11 +25,6 @@ exports.sendmail = function (req,res) {
     });
 }
 
-exports.getcontacts = function (req,res) {
-    res.send('./contacts.txt')
-}
-
-
 exports.register = function (req,res) {
     var _name = req.body.name;
     var _from = req.body.email;
