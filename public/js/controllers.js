@@ -5,7 +5,16 @@
 angular.module('devnestApp.controllers', []).
   controller('RegisterCtrl', function ($scope,$window,$http,$httpParamSerializer) {
     $scope.contacts ={};
-    //$scope.form.position = "sofware developer";
+    $scope.positions = [
+      {name:'Software Architect'},
+      {name:'Software Developer'},
+      {name:'Quality Engineer'},
+      {name:'DevOps Engineer'},
+      {name:'IT Engineer'},
+      {name:'Manager'},
+      {name:'Other'}
+      ];
+    $scope.selectedPosition = $scope.positions[1].name;
     $scope.register = function () {
       $http({
         method: 'POST',

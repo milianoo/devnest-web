@@ -22,14 +22,7 @@
                             <input type="email" class="form-control biggerFont" placeholder="please enter your email address" ng-model='form.email' data-error="Bruh, that email address is invalid" required>
                         </div>
                         <div class="form-group">
-                            <select class="button email biggerFont control" name="position" ng-model='form.position'>
-                              <option value="sofware architect">Software Architect</option>
-                              <option value="sofware developer" selected="selected" >Software Developer</option>
-                              <option value="quality engineer">Quality Engineer</option>
-                              <option value="devops engineer">DevOps Engineer</option>
-                              <option value="manager">Manager</option>
-                              <option value="IT">IT Engineer</option>
-                              <option value="other">Other</option>
+                            <select class="button email biggerFont control" ng-options="position.name as position.name for position in positions" ng-model='selectedPosition'>
                             </select>
                         </div>
                         <div class="form-group">
